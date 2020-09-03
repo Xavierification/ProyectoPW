@@ -1,3 +1,3 @@
 # ProyectoPW
-Front-End del proyecto de Plataformas Web
+Front-End del proyecto de Plataformas Web.
 Fin del Proyecto
