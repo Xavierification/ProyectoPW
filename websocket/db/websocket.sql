@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 29, 2018 at 03:21 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 03-09-2020 a las 02:38:08
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `websocket`
+-- Base de datos: `websocket`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chatrooms`
+-- Estructura de tabla para la tabla `chatrooms`
 --
 
 CREATE TABLE `chatrooms` (
@@ -36,70 +35,65 @@ CREATE TABLE `chatrooms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `chatrooms`
+-- Volcado de datos para la tabla `chatrooms`
 --
 
 INSERT INTO `chatrooms` (`id`, `userid`, `msg`, `created_on`) VALUES
-(1, 2, 'Hello', '2018-04-28 02:33:45'),
-(2, 1, 'Hi', '2018-04-28 02:33:55'),
-(3, 2, 'How are you?', '2018-04-28 02:34:07'),
-(4, 1, 'I am good..\nwhat about you?', '2018-04-28 02:34:39'),
-(5, 2, 'Me too...', '2018-04-28 02:34:51');
+(17, 13, 'woahhhhh wtf man', '2020-09-02 08:34:03');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estructura de tabla para la tabla `users`
 --
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `login_status` tinyint(4) NOT NULL DEFAULT '0',
+  `login_status` tinyint(4) NOT NULL DEFAULT 0,
   `last_login` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Volcado de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `login_status`, `last_login`) VALUES
-(1, 'Durgesh', 'durgesh@gmail.com', 1, '2018-04-29 02:15:31'),
-(2, 'Sachin', 'sachin@gmail.com', 0, '2018-04-29 02:15:52'),
-(3, 'Dinesh', 'dinesh@gmail.com', 1, '2018-04-29 02:15:18');
+(12, 'Xavier', 'xavito98@hotmail.com', 1, '2020-09-02 08:33:47'),
+(13, 'Diego Castro', 'pepito@l', 0, '2020-09-02 08:34:15');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `chatrooms`
+-- Indices de la tabla `chatrooms`
 --
 ALTER TABLE `chatrooms`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indices de la tabla `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `chatrooms`
+-- AUTO_INCREMENT de la tabla `chatrooms`
 --
 ALTER TABLE `chatrooms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
